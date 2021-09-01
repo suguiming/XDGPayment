@@ -34,7 +34,7 @@ typedef void(^XDGPaymentCallback)(XDGOrderInfo *orderInfo,NSError *error);
 
 
 
-typedef void(^XDGRePaymentCallback)(int code,NSString *msg,NSArray *data);
+typedef void(^XDGRePaymentCallback)(int code,NSString * _Nullable msg,NSArray *_Nullable data);
 
 
 @interface XDGPayment : NSObject
@@ -75,12 +75,10 @@ typedef void(^XDGRePaymentCallback)(int code,NSString *msg,NSArray *data);
                     ext:(NSString *)ext
       completionHandler:(XDGPaymentCallback)completionHandler;
 
-//// 当前未处理订单，带UI界面
-//+ (void)queryRestoredPurchasesWithUI:(XDGPayBackBlock)completionHandler;
 
 //方案二：
 ///  不带界面的补款回调
-///  XDGRePaymentCallback 补款中的回调信息
+/// @param  completionHandler 补款中的回调信息
 ///  code   错误码
 ///  msg    具体错误信心
 ///  data   数据
