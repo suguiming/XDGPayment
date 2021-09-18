@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** TDSGlobal 平台订单信息 */
 @interface XDGOrderInfo : NSObject
 /// 游戏侧订单号
-@property (nonatomic,copy,readonly) NSString *gameOrderId;
+@property (nonatomic,copy,readonly) NSString *outTradeNo;
 /// 商品 ID
 @property (nonatomic,copy,readonly) NSString *productIdentifier;
 /// 角色所在服务器 ID
